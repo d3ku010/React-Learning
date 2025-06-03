@@ -32,7 +32,6 @@ header {
   margin-bottom: 30px;
 }
 
-
 .card {
   background-color: #fff;
   color: #333;
@@ -157,7 +156,7 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: #242777;
+  background-color: #202142;
 }
 
 .btn-secondary {

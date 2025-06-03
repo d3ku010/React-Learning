@@ -1,20 +1,22 @@
-
 import PropTypes from 'prop-types'
 
-function Button({ children, variant = 'primary', type = 'button', isDisabled = false }) {
-    console.log('Button props:', { variant, type, isDisabled });
+function Button({ children, version, type, isDisabled }) {
     return (
-        <button type={type} disabled={isDisabled} className={`btn btn-${variant} `}>
+        <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
             {children}
-        </ button>
+        </button>
     )
 }
 
-
+Button.defaultProps = {
+    version: 'primary',
+    type: 'button',
+    isDisabled: false,
+}
 
 Button.propTypes = {
     children: PropTypes.node.isRequired,
-    variant: PropTypes.string,
+    version: PropTypes.string,
     type: PropTypes.string,
     isDisabled: PropTypes.bool,
 }
